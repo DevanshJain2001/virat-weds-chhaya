@@ -30,11 +30,29 @@ console.log("working")
 
 // Background Music 
 
-$(document).on('click', function(){
-    document.getElementById("my_audio").play();
-    console.log('Shaadi me zaroor aana');
+let isPlaying = false; // Flag to track audio status
+
+// Play music on any click anywhere on the page
+$(document).on('click', function() {
+    const audio = document.getElementById("my_audio");
+
+    // Only play if audio is not already playing
+    if (!isPlaying) {
+        audio.play();
+        isPlaying = true;
+        console.log('Shaadi me zaroor aana');
+        $('#stopButton').show();
+    }
 });
 
+// Stop music and hide the button
+function stopMusic(event) {
+    event.stopPropagation(); // Prevent triggering play on button click
+    const audio = document.getElementById("my_audio");
+    audio.pause();
+    isPlaying = false; // Update flag
+    $('#stopButton').hide();
+}
 //Countdown 
 
 (function () {

@@ -427,15 +427,15 @@ figure:hover img {
 
 #countdown li {
 	display: inline-block;
-	font-size: 1.25em;
+	font-size: 0.75em;
 	list-style-type: none;
-	padding: 1em;
+	padding: 0.75em;
 	text-transform: uppercase;
   }
   
 #countdown li span {
 	display: block;
-	font-size: 1.5rem;
+	font-size: 1.25rem;
   }
   
   
@@ -443,4 +443,39 @@ figure:hover img {
 	font-family: 'Raleway', sans-serif;
 	font-style: normal; 
 	
+}
+
+
+
+/* Style for the stop button */
+#stopButton {
+    position: fixed;       /* Fixes button position to the viewport */
+    top: 20px;             /* Position from the top */
+    right: 20px;           /* Position from the right */
+    width: 50px;           /* Circular button width */
+    height: 50px;          /* Circular button height */
+    border-radius: 50%;    /* Makes the button circular */
+    background-color: #ff4d4d; /* Red color for stop */
+    color: white;          /* Icon color */
+    border: none;          /* Remove default border */
+    outline: none;         /* Remove default outline */
+    cursor: pointer;       /* Changes cursor to pointer */
+    display: flex;         /* Flexbox for center alignment */
+    align-items: center;   /* Center icon vertically */
+    justify-content: center; /* Center icon horizontally */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds shadow for depth */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+/* Hover effect */
+#stopButton:hover {
+    background-color: #cc0000; /* Darker shade of red */
+}
+
+/* Icon styling using Font Awesome or similar icon font */
+#stopButton::before {
+    content: "\f04d"; /* Unicode for "stop" icon in Font Awesome */
+    font-family: "Font Awesome 5 Free"; /* Ensure Font Awesome is loaded */
+    font-weight: 900; /* Use solid version of the icon */
+    font-size: 20px; /* Icon size */
 }
