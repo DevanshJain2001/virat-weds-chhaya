@@ -61,7 +61,7 @@ function stopMusic(event) {
 		  hour = minute * 60,
 		  day = hour * 24;
  
-	const countDown = new Date(2024, 12, 7, 18, 0, 0);
+	const countDown = new Date(2024, 11, 7, 18, 0, 0);
 		x = setInterval(function() {    
   
 		  const now = new Date().getTime(),
